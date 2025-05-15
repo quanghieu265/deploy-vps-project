@@ -12,7 +12,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -58,5 +58,10 @@
     "typescript-eslint": "^8.31.1",
     "vite": "^6.3.1",
     "vite-plugin-eslint": "^1.8.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0"
+    ]
   }
 }

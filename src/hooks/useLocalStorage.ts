@@ -1,9 +1,6 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-function useLocalStorage<T>(
-  key: string,
-  initialValue: T
-): [T, (value: T) => void] {
+function useLocalStorage<T>(key: string, initialValue: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
       const item = localStorage.getItem(key);
@@ -19,7 +16,7 @@ function useLocalStorage<T>(
       setStoredValue(value);
       localStorage.setItem(key, JSON.stringify(value));
     } catch (error) {
-      console.log("error writing to local storage", error);
+      console.log('error writing to local storage', error);
     }
   };
 

@@ -7,7 +7,6 @@ import Header from '@/components/organisms/Header';
 
 function ProtectedLayout() {
   const userInfo = useSelector((state: RootState) => state.auth.userInfo);
-  let unusedVar = '';
 
   return userInfo?.isAuthenticated ? (
     <>
