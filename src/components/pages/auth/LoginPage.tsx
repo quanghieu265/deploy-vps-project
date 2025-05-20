@@ -63,7 +63,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <div className="font-bold">Login Page</div>
+      <div className="font-bold">Login Page from AutoDeploy</div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
           <FormField
